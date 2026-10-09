@@ -1,14 +1,15 @@
 add_rules("mode.debug", "mode.release")
+add_rules("plugin.compile_commands.autoupdate")
 
 target("clib")
-    set_kind("static")
-    add_files("src/*.c")
-    add_includedirs("include", {public = true})
+set_kind("static")
+add_files("src/*.c")
+add_includedirs("include", { public = true })
 
 target("test")
-    set_kind("binary")
-    add_files("test/main.c")
-    add_deps("clib")
+set_kind("binary")
+add_files("test/main.c")
+add_deps("clib")
 --
 -- If you want to known more usage about xmake, please see https://xmake.io
 --
@@ -77,4 +78,3 @@ target("test")
 --
 -- @endcode
 --
-

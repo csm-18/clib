@@ -1,6 +1,6 @@
-#include <stdio.h>
+#include "clib/clib.h"
 
 int main(int argc, char **argv) {
-    printf("hello world!\n");
-    return 0;
+  hello();
+  return 0;
 }
